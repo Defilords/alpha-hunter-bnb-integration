@@ -1,0 +1,27 @@
+# Same compiler settings as the BSC mainnet deployments (read from their Sourcify verification records):
+# solc 0.8.24, optimizer 153 runs, via-IR, EVM cancun. Building here reproduces the deployed bytecode.
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.24"
+optimizer = true
+optimizer_runs = 153
+via_ir = true
+evm_version = "cancun"
+bytecode_hash = "ipfs"
+cbor_metadata = true
+remappings = [
+  # exactly the remapping list recorded in the deployments' metadata (it is part of the metadata hash)
+  "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+  "v3-core/=lib/v3-core/",
+  "erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+  "forge-std/=lib/forge-std/src/",
+  "halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/",
+  "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+  "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+]
+
+[rpc_endpoints]
+bsc = "https://bsc-dataseed.bnbchain.org"

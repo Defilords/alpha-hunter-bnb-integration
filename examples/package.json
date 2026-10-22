@@ -1,0 +1,8 @@
+{
+  "name": "alpha-hunter-bnb-examples",
+  "private": true,
+  "type": "module",
+  "description": "Read-only examples against the Alpha Hunter contracts on BNB Smart Chain",
+  "scripts": { "read": "node read-onchain.mjs" },
+  "dependencies": { "ethers": "6.13.5" }
+}
