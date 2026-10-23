@@ -68,9 +68,9 @@ and the governance setup. Read-only: no wallet, no keys, no transactions.
 ## Status
 
 - Autopilot vault: live since 2 Oct 2026 in a staged launch: deposit allowlist on, $2,000 deposit cap.
-- Guardrail: deployed 21 Oct 2026. Opening positions needs the oracle's TWAP sources for CAKE and WBNB, registered through the
-  timelock; until then every open is refused by the contract. Launch is limited to allowlisted wallets, CAKE only, 10 to 500 USDT
-  per position.
+- Guardrail: deployed 21 Oct 2026; open since 23 Oct 2026, when the timelock executed the oracle configuration it needs (PancakeSwap
+  V3 TWAP sources for CAKE and WBNB, and the USDT feed with a 1-hour staleness limit). Staged launch: allowlisted wallets only,
+  CAKE only, 10 to 500 USDT per position.
 - **No external audit yet.** Do not deposit more than you can afford to lose. See [`SECURITY.md`](SECURITY.md).
 
 ## Licensing
